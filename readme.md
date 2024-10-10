@@ -40,7 +40,7 @@ Use the release binary, or build the tool from source.
 cargo build --release
 ```
 
-Find the binary in ```./target/release/```.
+Find the binary in ```./target/release/```
 
 ## How to use the tool
 
