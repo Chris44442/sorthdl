@@ -40,6 +40,8 @@ Use the release binary, or build the tool from source.
 cargo build --release
 ```
 
+Find the binary in ```./target/release/```.
+
 ## How to use the tool
 
 Use the builtin help function:
@@ -51,7 +53,7 @@ Use the builtin help function:
 Tip: Use stdin and stdout to your advantage with piping:
 
 ```bash
-cat sort.json | sorthdl -p=0x5555 -w=20 -d=signed > sort.vhd
+cat sort.json | ./sorthdl -p=0xAAAA -w=20 -d=signed > sort.vhd
 ```
 
 The pipeline option might seem a bit confusing initially. The most useful settings are probably 0xFFFF, 0xAAAA, 0x4924 and 0x0000. Those set all, every other, every third or no stages respectively as pipeline-registered.
