@@ -42,9 +42,19 @@ cargo build --release
 
 ## How to use the tool
 
+Use the builtin help function:
+
 ```bash
 ./sorthdl -h
 ```
+
+Tip: Use stdin and stdout to your advantage with piping:
+
+```bash
+cat sort.json | sorthdl -p=0x5555 -w=20 -d=signed > sort.vhd
+```
+
+The pipeline option might seem a bit confusing initially. The most useful settings are probably 0xFFFF, 0xAAAA, 0x4924 and 0x0000. Those set all, every other, every third or no stages respectively as pipeline-registered.
 
 ```txt
 CLI tool to print HDL code for SorterHunter sorting network json files
@@ -60,3 +70,4 @@ Options:
   -p, --pipeline <PIPELINE>    Set pipelined stages, in hex, e.g. "0xAAAA" will set a pipeline register at every other stage. The number of digits must be equal or greater than the number of sorting network stages. Default is to pipeline-register all stages [default: 0xFFFFFFFF]
   -h, --help                   Print help
 ```
+
